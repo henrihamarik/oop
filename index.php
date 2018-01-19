@@ -8,7 +8,7 @@
 // loeme sisse projekti konfiguratsiooni
 require_once 'conf.php';
 // loome test objekti template klassist
-$testTabel = new template('test');
+$testTabel = new templates('test');
 // lisame objekti testvaade
 echo '<pre>';
 print_r($testTabel);
