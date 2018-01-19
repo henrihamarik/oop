@@ -47,5 +47,14 @@ class templates
         fclose($fb)*/
         $this->content = file_get_contents($file);
     }
-
+    function set($name, $value){
+        $this->vars[$name] = $value;
+    }
+    function  parse() {
+        $str = $this->content;
+        foreach ($this->vars as $name=>$value){
+            str_replace('{'.$name.'}', $value, $str);
+        }
+        return $str;
+    }
 }
