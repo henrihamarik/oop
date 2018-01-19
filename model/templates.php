@@ -53,7 +53,7 @@ class templates
     function  parse() {
         $str = $this->content;
         foreach ($this->vars as $name=>$value){
-            str_replace('{'.$name.'}', $value, $str);
+            $str=str_replace('{'.$name.'}', $value, $str);
         }
         return $str;
     }
