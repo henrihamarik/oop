@@ -47,4 +47,5 @@ class templates
         fclose($fb)*/
         $this->content = file_get_contents($file);
     }
+
 }
