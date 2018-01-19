@@ -12,6 +12,12 @@ class templates
     var $content = false;
     var $vars = array();
 
+    public function __construct($file)
+    {
+        $this->file = $file;
+        $this->loadFile();
+    }
+
     function loadFile(){
         if (!is_dir(VIEW_DIR)){
             echo 'Ei ole leitud '.VIEW_DIR.' kataloogi <br />';
