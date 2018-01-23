@@ -18,8 +18,7 @@ $mainTmpl->set('lang_bar', 'Keeleriba');
 // katsetame menüü loomist
 require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
-// lisame objekti testvaade
-echo '<pre>';
-print_r($mainTmpl);
-echo '</pre>';
 echo $mainTmpl->parse();
+echo '<pre>';
+print_r($http);
+echo '</pre>';
