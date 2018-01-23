@@ -19,4 +19,6 @@ $mainTmpl->set('lang_bar', 'Keeleriba');
 require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
 echo $mainTmpl->parse();
-echo HTTP_HOST.SCRIPT_NAME;
+$link = HTTP_HOST.SCRIPT_NAME;
+$http->addToLink($link, 'control', 'login');
+$http->addToLink($link, 'username', 'test');

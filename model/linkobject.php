@@ -18,4 +18,12 @@ class linkobject extends http
         $this->baseLink = $this->protocol.HTTP.HOST.SCRIPT_NAME;
         echo $this->baseLink;
     }
+
+    function addToLink(&$link, $name, $value) {
+        if ($link !=''){
+            $link = $link.$this->delim;
+        }
+        $link = fixUrl($name).$this->eq.fixUrl($value);
+        echo $link.'<br />';
+    }
 }
