@@ -8,7 +8,7 @@
 // loeme sisse projekti konfiguratsiooni
 require_once 'conf.php';
 // loome test objekti template klassist
-$testTabel = new templates('main');
+$mainTmpl = new templates('main');
 // lisame objekti testvaade
 $mainTmpl->set('lang','et');
 $mainTmpl->set('page_title','Lehe pealkiri');
