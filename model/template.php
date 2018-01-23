@@ -50,6 +50,13 @@ class template
     function set($name, $value){
         $this->vars[$name] = $value;
     }
+    function add($name, $value){
+        if(!isset($this->vars[$name]})){
+            $this->set($name, $value);
+        } else {
+            $this->vars[$name] = $this->vars[$name] . $value;
+        }
+    }
     function  parse() {
         $str = $this->content;
         foreach ($this->vars as $name=>$value){
