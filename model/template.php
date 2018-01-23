@@ -6,7 +6,7 @@
  * Time: 10:27
  */
 
-class templates
+class template
 {
     var $file = '';
     var $content = false;
