@@ -16,7 +16,7 @@ class http
     }
 
     function init(){
-        $this->vars = array_merge($_GET, $_POST;
+        $this->vars = array_merge($_GET, $_POST);
         $this->server = $_SERVER;
     }
 }
