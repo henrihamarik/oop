@@ -19,6 +19,6 @@ $mainTmpl->set('menu','Lehe menüü');
 $mainTmpl->set('content','Lehe sisu');
 
 echo '<pre>';
-print_r($testTabel);
+print_r($mainTmpl);
 echo '</pre>';
-echo $testTabel->parse();
+echo $mainTmpl->parse();
