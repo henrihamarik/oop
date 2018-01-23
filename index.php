@@ -19,7 +19,4 @@ $mainTmpl->set('lang_bar', 'Keeleriba');
 require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
 echo $mainTmpl->parse();
-echo '<pre>';
-print_r($http);
-echo '</pre>';
 echo HTTP_HOST.SCRIPT_NAME;
