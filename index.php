@@ -7,17 +7,17 @@
  */
 // loeme sisse projekti konfiguratsiooni
 require_once 'conf.php';
-// loome test objekti template klassist
-$mainTmpl = new templates('main');
+// loome peamalli objekti template klassist
+$mainTmpl = new template('main');
+// määrame reaalväärtused malli elementidele
+$mainTmpl->set('lang', 'et');
+$mainTmpl->set('page_title', 'Lehe pealkiri');
+$mainTmpl->set('user', 'Kasutaja');
+$mainTmpl->set('title', 'Pealkiri');
+$mainTmpl->set('lang_bar', 'Keeleriba');
+$mainTmpl->set('menu', 'Lehe menüü');
+$mainTmpl->set('content', 'Lehe sisu');
 // lisame objekti testvaade
-$mainTmpl->set('lang','et');
-$mainTmpl->set('page_title','Lehe pealkiri');
-$mainTmpl->set('user','Kasutaja');
-$mainTmpl->set('title','Pealkiri');
-$mainTmpl->set('lang_bar','Keeleriba');
-$mainTmpl->set('menu','Lehe menüü');
-$mainTmpl->set('content','Lehe sisu');
-
 echo '<pre>';
 print_r($mainTmpl);
 echo '</pre>';
