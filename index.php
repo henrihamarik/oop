@@ -22,3 +22,4 @@ echo $mainTmpl->parse();
 echo '<pre>';
 print_r($http);
 echo '</pre>';
+echo HTTP_HOST.SCRIPT_NAME;
