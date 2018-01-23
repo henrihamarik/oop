@@ -51,7 +51,7 @@ class template
         $this->vars[$name] = $value;
     }
     function add($name, $value){
-        if(!isset($this->vars[$name]})){
+        if(!isset($this->vars[$name])){
             $this->set($name, $value);
         } else {
             $this->vars[$name] = $this->vars[$name] . $value;
