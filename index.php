@@ -10,8 +10,14 @@ require_once 'conf.php';
 // loome test objekti template klassist
 $testTabel = new templates('test');
 // lisame objekti testvaade
-$testTabel->set('esimene','1');
-$testTabel->set('teine','2');
+$mainTmpl->set('lang','et');
+$mainTmpl->set('page_title','Lehe pealkiri');
+$mainTmpl->set('user','Kasutaja');
+$mainTmpl->set('title','Pealkiri');
+$mainTmpl->set('lang_bar','Keeleriba');
+$mainTmpl->set('menu','Lehe menüü');
+$mainTmpl->set('content','Lehe sisu');
+
 echo '<pre>';
 print_r($testTabel);
 echo '</pre>';
