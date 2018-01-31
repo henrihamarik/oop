@@ -9,6 +9,7 @@
 require_once 'conf.php';
 // loome peamalli objekti template klassist
 $mainTmpl = new template('main');
+require_once 'control.php';
 // määrame reaalväärtused malli elementidele
 $mainTmpl->set('lang', 'et');
 $mainTmpl->set('page_title', 'Lehe pealkiri');
@@ -17,7 +18,6 @@ $mainTmpl->set('title', 'Pealkiri');
 $mainTmpl->set('lang_bar', 'Keeleriba');
 // katsetame menüü loomist
 require_once 'menu.php';
-$mainTmpl->set('content', 'Lehe sisu');
+
 echo $mainTmpl->parse();
-$link =  $http->getLink(array('control' => 'login','user' => 'test'));
-echo $link;
+echo $http->get('control');
