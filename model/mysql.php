@@ -37,4 +37,15 @@ class mysql
             exit;
         }
     }
+
+    //
+    function query($sql){
+        $result = mysqli_query($this->conn, $sql);
+        if ($result == false){
+            echo 'Probleem Päringuga<br />';
+            echo '<b>'.$sql.'</b>';
+            return false;
+        }
+        return $result;
+    }
 }
