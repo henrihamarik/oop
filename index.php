@@ -20,7 +20,7 @@ $mainTmpl->set('lang_bar', 'Keeleriba');
 require_once 'menu.php';
 
 echo $mainTmpl->parse();
-
+$db->query('SELECT NOW()');
 echo '<pre>';
 print_r($db);
 echo'</pre>';
