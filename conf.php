@@ -20,4 +20,8 @@ require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobject.php';
 require_once MODEL_DIR.'mysql.php';
 
+require_once 'db_conf.php';
+
 $http = new linkobject();
+
+$db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);

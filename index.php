@@ -20,4 +20,7 @@ $mainTmpl->set('lang_bar', 'Keeleriba');
 require_once 'menu.php';
 
 echo $mainTmpl->parse();
-echo $http->get('control');
+
+echo '<pre>';
+print_r($db);
+echo'</pre>';
