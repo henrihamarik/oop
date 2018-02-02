@@ -18,5 +18,6 @@ require_once LIB_DIR.'utils.php';
 require_once  MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobject.php';
+require_once MODEL_DIR.'mysql.php';
 
 $http = new linkobject();
