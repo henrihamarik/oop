@@ -37,15 +37,26 @@ class mysql
             exit;
         }
     }
-
-    //
+    // funktsioon päringu edastamiseks
     function query($sql){
         $result = mysqli_query($this->conn, $sql);
-        if ($result == false){
-            echo 'Probleem Päringuga<br />';
+        if($result == false){
+            echo 'Probleem päringuga<br />';
             echo '<b>'.$sql.'</b>';
             return false;
         }
         return $result;
+    }
+    // funktisioon, mis annab ka päringuga tulnud andmed
+    function getData($sql){
+        $result = $this->query($sql);
+        $data = array();
+        while ($row = mysqli_fetch_assoc($result)){
+            $data[] = $row;
+        }
+        if(count($data) == 0){
+            return false;
+        }
+        return $data;
     }
 }
