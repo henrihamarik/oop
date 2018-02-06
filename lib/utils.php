@@ -9,3 +9,7 @@
 function fixUrl($str){
     return urlencode($str);
 }
+
+function fixDb($value) {
+    return '"'.addslashes($value).'"';
+}
