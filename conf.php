@@ -15,6 +15,10 @@ define('DEFAULT_CONTROL','default');
 
 require_once LIB_DIR.'utils.php';
 
+define('ROLE_NONE', 0);
+define('ROLE_USER', 1);
+define('ROLE_ADMIN', 2);
+
 require_once  MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobject.php';
