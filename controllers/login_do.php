@@ -15,5 +15,6 @@ $result = $db->getData($sql);
 if ($result !=false){
     echo 'Oled sisse logitud<br/>';
 } else{
-    echo 'Suuname sisselogimisele <br/>';
+    $link = $http->getLink(array('control'=>'login'));
+    $http->redirect($link);
 }
