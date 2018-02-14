@@ -40,4 +40,12 @@ class http
     function set($name, $value){
         $this->vars[$name] = $value;
     }
+    function redirect($url=false){
+        if ($url == false){
+            $url = $this->getLink();
+        }
+        $url = str_replace('&amp', '&', $url);
+        header('Location: '.$url);
+        exit;
+    }
 }
