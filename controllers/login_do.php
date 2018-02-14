@@ -7,11 +7,13 @@
  */
 $username = $http->get('username');
 $password = $http->get('password');
-
-echo $username.'<br/>';
-echo $password.'<br/>';
-
-$sql = 'SELECT * FROM user'.
-    'WHERE username ='.fixDb($username).
+// koostame päring kasutaja kontrollimiseks
+$sql = 'SELECT * FROM user '.
+    'WHERE username='.fixDb($username).
     ' AND password='.fixDb(md5($password));
-echo $sql. '<br/>';
+$result = $db->getData($sql);
+if ($result !=false){
+    echo 'Oled sisse logitud<br/>';
+} else{
+    echo 'Suuname sisselogimisele <br/>';
+}
