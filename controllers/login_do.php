@@ -13,6 +13,7 @@ $sql = 'SELECT * FROM user '.
     ' AND password='.fixDb(md5($password));
 $result = $db->getData($sql);
 if ($result !=false){
+
     echo 'Oled sisse logitud<br/>';
 } else{
     $link = $http->getLink(array('control'=>'login'));

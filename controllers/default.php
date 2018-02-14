@@ -5,6 +5,7 @@
  * Date: 31.01.2018
  * Time: 09:52
  */
+
 $page_id = (int)$http->get('page_id');//lehe id
 //..
 $sql = 'SELECT * FROM content '.
