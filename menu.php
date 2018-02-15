@@ -28,7 +28,7 @@ if($result != false){
 // katsetamiseks lisan uus konstant, mis määrab kasutaja
 // id - sellest lähtun, kas kasutajale on võimalik
 // antud menüü element näidata või mitte
-define('USER_ID', 0); // mitte sisse logitud kasutaja
+//define('USER_ID', 0); // mitte sisse logitud kasutaja
 // näitame sisselogimine neile, kes ei ole sisse logitud
 if(USER_ID == ROLE_NONE){
     $menuItem->set('menu_item_name', 'Logi sisse');
