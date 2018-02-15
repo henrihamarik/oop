@@ -40,6 +40,12 @@ class session
             $this->http->set('sid', $sid);
         }
     }
+    function clearSessions(){
+        $sql = 'DELETE FROM session WHERE '.
+            time().' - UNIX_TIMESTAMP(changed) > '.
+            $this->timeout;
+        $this->db->query($sql);
+    }
 
 
 }
