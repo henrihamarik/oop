@@ -20,6 +20,7 @@ class session
         $this->http = &$http;
         $this->db = &$db;
         $this->sid = $http->get('sid');
+        $this->checkSession();
     }
 
     function sessionCreate($user = false) {
@@ -49,4 +50,37 @@ class session
     }
 
 
+    function  checkSession(){
+        $this->clearSessions();
+        if ($this->sid === false and $this->anonymous){
+            $this->sessionCreate();
+        }
+        if ($this->sid !== false){
+            $sql = 'SELECT * FROM session WHERE '.
+                'sid='.fixDb($this->sid);
+            $result = $this->db->getData($sql);
+            if ($result == false){
+                if ($this->anonymous){
+                    $this->sessionCreate();
+                    define('USER_ID', 0);
+                    define('ROLE_ID', 0);
+                } else {
+                    $this->sid = false;
+                }
+            } else {
+                $vars = unserialize($result[0]['svars']);
+                if (!is_array($vars)){
+                    $vars = array();
+                }
+                $this->vars = $vars;
+                $user_data = unserialize($result[0]['user_data']);
+                define('USER_ID', $user_data['user_id']);
+                define('ROLE_ID', $user_data['role_id']);
+                $this->user_data = $user_data;
+            }
+        } else {
+            define('USER_ID', 0);
+            define('ROLE_ID', 0);
+        }
+    }
 }

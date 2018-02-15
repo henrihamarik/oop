@@ -12,7 +12,7 @@ class linkobject extends http
     var $protocol = 'http://';
     var $eq = '=';
     var $delim = '&amp;';
-    var $aie = array('lang_id'); // lingi kohustuslikud lisandid
+    var $aie = array('sid'); // lingi kohustuslikud lisandid
     /**
      * linkobject constructor.
      */
