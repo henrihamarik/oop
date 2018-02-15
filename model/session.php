@@ -19,6 +19,7 @@ class session
     {
         $this->http = &$http;
         $this->db = &$db;
+        $this->sid = $http->get('sid');
     }
 
     function sessionCreate($user = false) {
