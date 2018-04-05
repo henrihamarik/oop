@@ -41,6 +41,9 @@ class http
         $this->vars[$name] = $value;
     }
     function redirect($url=false){
+        //
+        global $sess;
+        $sess->flush();
         if ($url == false){
             $url = $this->getLink();
         }
