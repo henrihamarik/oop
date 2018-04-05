@@ -14,8 +14,8 @@ $sql = 'SELECT * FROM user '.
 $result = $db->getData($sql);
 if ($result !=false){
     $sess->sessionCreate($result[0]);
-    $mainTmpl->set('content','Oled sisse logitud<br />');
-    echo 'Oled sisse logitud<br/>';
+    //
+    $http->redirect();
 } else{
     $link = $http->getLink(array('control'=>'login'));
     $http->redirect($link);

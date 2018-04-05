@@ -22,5 +22,7 @@ require_once 'menu.php';
 echo $mainTmpl->parse();
 // kontrollime db objekti sisu
 
-
+echo '<pre>';
+print_r($sess);
+echo '</pre>';
 
